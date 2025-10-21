@@ -1,7 +1,5 @@
-"use client"
-
 import { useState, useEffect } from "react"
-import { fetchMovies } from "../utils/api"
+import { fetchMovies } from "../utils/apii"
 
 export const useFetchMovies = () => {
   const [movies, setMovies] = useState([])
