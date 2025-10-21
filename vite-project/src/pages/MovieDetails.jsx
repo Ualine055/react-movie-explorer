@@ -1,8 +1,7 @@
-"use client"
 
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
-import { fetchMovieById } from "../utils/api"
+import { fetchMovieById } from "../utils/apii"
 
 export default function MovieDetails({ isFavorite, onToggleFavorite }) {
   const { id } = useParams()
