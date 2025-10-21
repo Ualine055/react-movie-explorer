@@ -1,5 +1,3 @@
-"use client"
-
 export default function SearchBar({ searchTerm, onSearchChange }) {
   return (
     <div style={styles.container}>
