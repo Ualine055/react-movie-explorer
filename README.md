@@ -54,7 +54,9 @@ A single-page application (SPA) built with React and Vite that allows users to e
 
 ## 🌐 Live Demo
 
-[https://ualine055.github.io/react-movie-explorer/]
+[
+https://vercel.com/new/ualine055-5515s-projects/success?developer-id=&external-id=&redirect-url=&branch=main&deploymentUrl=react-movie-explorer-375nbnir2-ualine055-5515s-projects.vercel.app&projectName=react-movie-explorer&s=https%3A%2F%2Fgithub.com%2FUaline055%2Freact-movie-explorer&gitOrgLimit=&hasTrialAvailable=1&totalProjects=1&flow-id=pAsvgaBYleHciVekAMld9
+]
 
 ## github repository link
 
