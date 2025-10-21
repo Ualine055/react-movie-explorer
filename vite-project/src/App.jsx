@@ -1,40 +1,57 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { useFavorites } from "./hooks/useFavorites"
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import MovieDetails from "./pages/MovieDetails"
-import Favorites from "./pages/Favorites"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Favorites from "./pages/Favorites";
+import MovieDetails from "./pages/MovieDetails";
+import { useFavorites } from "./hooks/useFavorites";
 
 function App() {
-  const { favorites, addFavorite, removeFavorite, isFavorite } = useFavorites()
+  const { favorites, addFavorite, removeFavorite, isFavorite } = useFavorites();
 
+  // Centralized toggle for all pages
   const handleToggleFavorite = (movie) => {
-    if (isFavorite(movie.id)) {
-      removeFavorite(movie.id)
-    } else {
-      addFavorite(movie)
-    }
-  }
+    isFavorite(movie.id) ? removeFavorite(movie.id) : addFavorite(movie);
+  };
 
   return (
-    <Router>
+    <>
       <Navbar favoritesCount={favorites.length} />
+
       <Routes>
         <Route
           path="/"
-          element={<Home favorites={favorites} onToggleFavorite={handleToggleFavorite} isFavorite={isFavorite} />}
-        />
-        <Route
-          path="/movie/:id"
-          element={<MovieDetails isFavorite={isFavorite} onToggleFavorite={handleToggleFavorite} />}
+          element={
+            <Home
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              isFavorite={isFavorite}
+            />
+          }
         />
         <Route
           path="/favorites"
-          element={<Favorites favorites={favorites} onToggleFavorite={handleToggleFavorite} isFavorite={isFavorite} />}
+          element={
+            <Favorites
+              favorites={favorites}
+              onToggleFavorite={handleToggleFavorite}
+              isFavorite={isFavorite}
+            />
+          }
+        />
+        <Route
+          path="/movie/:id"
+          element={
+            <MovieDetails
+              onToggleFavorite={handleToggleFavorite}
+              isFavorite={isFavorite}
+            />
+          }
         />
       </Routes>
-    </Router>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
+
