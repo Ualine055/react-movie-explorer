@@ -5,7 +5,7 @@ import MovieCard from "../components/MovieCard"
 import SearchBar from "../components/SearchBar"
 import CategoryFilter from "../components/CategoryFilter"
 
-export default function Home({ favorites, onToggleFavorite, isFavorite }) {
+export default function Home({ onToggleFavorite, isFavorite }) {
   const { movies, loading, error } = useFetchMovies()
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")

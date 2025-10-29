@@ -146,7 +146,7 @@ const styles = {
   title: {
     fontSize: "2.5rem",
     fontWeight: "bold",
-    color: "#e2e8f0",
+    color: "gray",
   },
   meta: {
     display: "flex",
@@ -191,11 +191,11 @@ const styles = {
     fontSize: "1.5rem",
     fontWeight: "600",
     marginBottom: "1rem",
-    color: "#e2e8f0",
+    color: "blue",
   },
   summaryText: {
     fontSize: "1rem",
     lineHeight: "1.6",
-    color: "#cbd5e1",
+    color: "black",
   },
 }
